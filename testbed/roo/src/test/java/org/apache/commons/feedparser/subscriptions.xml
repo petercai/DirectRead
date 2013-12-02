@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Under the Deodars subscriptions in Google Reader</title>
+    </head>
+    <body>
+        <outline title="news_tech" text="news_tech">
+            <outline text="Make Tech Easier" title="Make Tech Easier"
+                type="rss"
+                xmlUrl="http://feeds2.feedburner.com/MakeTechEasier" htmlUrl="http://www.maketecheasier.com"/>
+            <outline text="Mashable!" title="Mashable!" type="rss"
+                xmlUrl="http://feeds.feedburner.com/Mashable" htmlUrl="http://mashable.com/stories/?utm_campaign=Mash-Product-RSS-Pheedo-All-Partial&amp;utm_cid=Mash-Product-RSS-Pheedo-All-Partial&amp;utm_medium=feed&amp;utm_source=rss"/>
+        </outline>
+        <outline title="A-watch" text="A-watch">
+            <outline text="AddictiveTips » iOS"
+                title="AddictiveTips » iOS" type="rss"
+                xmlUrl="http://feeds.feedburner.com/Addictivetips/iOS" htmlUrl="http://www.addictivetips.com"/>
+            <outline text="AddictiveTips » Windows"
+                title="AddictiveTips » Windows" type="rss"
+                xmlUrl="http://www.addictivetips.com/category/windows-tips/feed/" htmlUrl="http://www.addictivetips.com"/>
+            <outline text="freewaregenius.com"
+                title="freewaregenius.com" type="rss"
+                xmlUrl="http://feeds.feedburner.com/Freewaregeniuscom" htmlUrl="http://www.freewaregenius.com"/>
+            <outline text="I Love Free Software"
+                title="I Love Free Software" type="rss"
+                xmlUrl="http://feeds.feedburner.com/ilovefreesoftware/OEwA" htmlUrl="http://www.ilovefreesoftware.com"/>
+            <outline text="Wow! eBook - Blog" title="Wow! eBook - Blog"
+                type="rss" xmlUrl="http://feeds.feedburner.com/wowebook" htmlUrl="http://www.wowebook.info"/>
+        </outline>
+        <outline title="Movies" text="Movies">
+            <outline text="Rainbow Cinemas Promenade Mall Showtimes"
+                title="Rainbow Cinemas Promenade Mall Showtimes"
+                type="rss"
+                xmlUrl="http://www.rainbowcinemas.ca/RSS/txt2atom.php?theatre=Promenade&amp;show=" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fwww.rainbowcinemas.ca%2FRSS%2Ftxt2atom.php%3Ftheatre%3DPromenade%26show%3D"/>
+        </outline>
+        <outline title="sandbox" text="sandbox">
+            <outline text="Lifehacker" title="Lifehacker" type="rss"
+                xmlUrl="http://www.lifehacker.com/index.xml" htmlUrl="http://lifehacker.com"/>
+            <outline text="MacUpdate - Mac OS X"
+                title="MacUpdate - Mac OS X" type="rss"
+                xmlUrl="http://feeds.feedburner.com/macupdate" htmlUrl="https://www.macupdate.com"/>
+            <outline text="PC World: Latest Technology News"
+                title="PC World: Latest Technology News" type="rss"
+                xmlUrl="http://feeds.pcworld.com/pcworld/latestnews" htmlUrl="http://www.pcworld.com"/>
+            <outline text="PC World: Tech Reviews"
+                title="PC World: Tech Reviews" type="rss"
+                xmlUrl="http://feeds.pcworld.com/pcworld/update/reviews" htmlUrl="http://www.pcworld.com"/>
+            <outline
+                text="PCWorld.com - Most Popular Downloads of the Week"
+                title="PCWorld.com - Most Popular Downloads of the Week"
+                type="rss"
+                xmlUrl="http://feeds.pcworld.com/pcworld/downloads/weekly" htmlUrl="http://www.pcworld.com"/>
+        </outline>
+        <outline title="BT" text="BT">
+            <outline text="Free Download - DownArchive"
+                title="Free Download - DownArchive" type="rss"
+                xmlUrl="http://feeds.feedburner.com/downarchiveinfo" htmlUrl="http://www.downarchive.ws/"/>
+            <outline text="IRFree.com - Download Last Releases"
+                title="IRFree.com - Download Last Releases" type="rss"
+                xmlUrl="http://www.irfree.com/rss.xml" htmlUrl="http://irfree.com/"/>
+            <outline text="IRFree.com » E-Books"
+                title="IRFree.com » E-Books" type="rss"
+                xmlUrl="http://www.irfree.com/e-books/feed/" htmlUrl="http://www.irfree.com"/>
+            <outline text="isoHunt > Video/Movies"
+                title="isoHunt > Video/Movies" type="rss"
+                xmlUrl="http://isohunt.com/js/rss/?iht=1" htmlUrl="http://isohunt.com"/>
+            <outline text="RSLinks" title="RSLinks" type="rss"
+                xmlUrl="http://www.rslinks.org/rss.xml" htmlUrl="http://www.rslinks.org/rss.xml"/>
+            <outline text="TorrentFreak" title="TorrentFreak" type="rss"
+                xmlUrl="http://feed.torrentfreak.com/Torrentfreak" htmlUrl="http://torrentfreak.com"/>
+        </outline>
+        <outline title="CN_news" text="CN_news">
+            <outline text="BBCChinese.com | 中文网主页"
+                title="BBCChinese.com | 中文网主页" type="rss"
+                xmlUrl="http://newsrss.bbc.co.uk/rss/chinese/simp/news/rss.xml" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fnewsrss.bbc.co.uk%2Frss%2Fchinese%2Fsimp%2Fnews%2Frss.xml"/>
+            <outline text="CSDN最新资讯" title="CSDN最新资讯" type="rss"
+                xmlUrl="http://www.csdn.net/article/rss_lastnews" htmlUrl="http://news.csdn.net"/>
+            <outline text="MingPao RSS" title="MingPao RSS" type="rss"
+                xmlUrl="http://www.mingpaofun.com/RSS/MingPaoRSS.xml" htmlUrl="http://www.mingpaofun.com/RSS/MingPaoRSS.xml"/>
+        </outline>
+        <outline title="Life" text="Life">
+            <outline
+                text="Canadian Freebies, Coupons, Deals, Bargains, Flyers, Contests Canada"
+                title="Canadian Freebies, Coupons, Deals, Bargains, Flyers, Contests Canada"
+                type="rss"
+                xmlUrl="http://feeds2.feedburner.com/smartcanucks" htmlUrl="http://smartcanucks.ca"/>
+        </outline>
+        <outline title="Dev" text="Dev">
+            <outline text="Command-Line-Fu" title="Command-Line-Fu"
+                type="rss"
+                xmlUrl="http://feeds2.feedburner.com/Command-line-fu" htmlUrl="http://www.commandlinefu.com/commands/browse/rss"/>
+        </outline>
+        <outline title="Java" text="Java">
+            <outline text="developerWorks : Web services 专区的文章，教程"
+                title="developerWorks : Web services 专区的文章，教程"
+                type="rss"
+                xmlUrl="http://www.ibm.com/developerworks/cn/views/rss/customrssatom.jsp?zone_by=Web+services&amp;type_by=Articles&amp;type_by=Tutorials&amp;search_by=%E6%9E%84%E5%BB%BA%E7%AE%80%E5%8D%95%E7%9A%84+C%2B%2B+%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6&amp;day=1&amp;month=01&amp;year=2005&amp;max_entries=10&amp;feed_by=rss&amp;encoding=UTF-8&amp;isGUI=true&amp;Submit.x=39&amp;Submit.y=11" htmlUrl="http://www.ibm.com/developerworks/cn/"/>
+            <outline text="IBM developerWorks 中国"
+                title="IBM developerWorks 中国" type="rss"
+                xmlUrl="http://www.ibm.com/developerworks/cn/rss/dwcn_dwtp.rss" htmlUrl="http://www.ibm.com/developerworks/cn/"/>
+            <outline text="IBM Redbooks | Just Published"
+                title="IBM Redbooks | Just Published" type="rss"
+                xmlUrl="http://www.redbooks.ibm.com/rss/all.xml" htmlUrl="http://www.redbooks.ibm.com"/>
+            <outline
+                text="Javalobby - The heart of the Java developer community"
+                title="Javalobby - The heart of the Java developer community"
+                type="rss"
+                xmlUrl="http://www.javalobby.org/forumRSS/61.xml" htmlUrl="http://java.dzone.com/"/>
+            <outline text="Latest headlines from JavaWorld"
+                title="Latest headlines from JavaWorld" type="rss"
+                xmlUrl="http://www.javaworld.com/index.xml" htmlUrl="http://www.javaworld.com/"/>
+        </outline>
+        <outline title="eclipse" text="eclipse">
+            <outline text="Eclipse News" title="Eclipse News" type="rss"
+                xmlUrl="http://www.eclipse.org/home/eclipsenews.rss" htmlUrl="http://www.eclipse.org"/>
+        </outline>
+    </body>
+</opml>

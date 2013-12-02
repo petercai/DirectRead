@@ -1,0 +1,6 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-30 23:31:04
+project --topLevelPackage cai.peter.rss.opml
+jpa setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT
+entity jpa --class ~.model.Outline --testAutomatically 
+field string --fieldName title
+field string --fieldName url
