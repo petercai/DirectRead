@@ -23,6 +23,7 @@ import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 
 import cai.peter.rss.opml.model.Outline;
+import cai.peter.rss.opml.model.Tag;
 
 public class OPMLProcessor
 {
@@ -34,14 +35,11 @@ public class OPMLProcessor
 	public OPMLProcessor()
 	{
 		super();
-//		root = new Group("root", null);
-//		currentGroup = root;
 	}
 
-//	Group root = null, currentGroup = null; 
+	Tag /*root = null,*/ currentTag = null; 
 	
 	
-	boolean nested = true;
 	public /*Group*/void process(InputStream is) throws JDOMException, IOException, FeedParserException
 	{
 		Document doc = new SAXBuilder().build(is);
@@ -105,27 +103,33 @@ public class OPMLProcessor
 //				System.out.println("title: "+title);
 //				System.out.println("feed: "+feed);
 				Outline outline = new Outline(title, feed);
-				logger.info("process() - Outline outline=" + outline);
-				outline.persist();
-//				currentGroup.addOutline(outline);
-				nested = false;
+//				logger.info("process() - Outline outline=" + outline);
+//				outline.persist();
+				outline.setTag(currentTag);
+				currentTag.addOutline(outline);
 			}
 			
 			public void onFolderEnd() throws FeedParserException
 			{
+				logger.info("onFolderEnd()");
+				currentTag.persist();
+				if( !currentTag.isRoot())
+					currentTag = currentTag.getParent();
 			}
 			
 			public void onFolder(FeedParserState state, String name)
 					throws FeedParserException
 			{
-//				if( !nested )
-//					currentGroup = currentGroup.getParent();
-//				Group newGroup = new Group(name, currentGroup);
-//				currentGroup.addGroup(newGroup);
-//				currentGroup = newGroup;
+				Tag newTag = new Tag(name);
+				logger.info("process() - Tag newTag=" + newTag);
+				if( currentTag != null )
+				{
+					newTag.setParent(currentTag);
+					currentTag.addTag(newTag);
+				}
+				currentTag = newTag;
+				newTag.persist();
 			}
 		}, doc);
-
-//        return root;
 	}
 }
