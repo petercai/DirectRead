@@ -2,6 +2,10 @@ package org.apache.commons.feedparser;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.EntityManager;
 
 import org.apache.log4j.Logger;
 import org.jdom.JDOMException;
@@ -12,6 +16,8 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import cai.peter.rss.opml.model.Outline;
+import cai.peter.rss.opml.model.Tag;
 import cai.peter.rss.opml.processor.OPMLProcessor;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -37,18 +43,47 @@ public class TestOPMLFeedParserTest
 	public void testParse() throws FeedParserException, IOException, JDOMException
 	{
         InputStream is = this.getClass().getClassLoader().getResourceAsStream(opmlFile);
-        /*Group root = */new OPMLProcessor().process(is);
-//        logger.info("testParse() - Group root=" + root);
-//        printGroup(root.getGroups());
+        new OPMLProcessor().process(is);
 	}
 	
-//	void printGroup(List<Group> groups)
-//	{
-//		for( Group group : groups)
+	
+	@Test
+	public void testPopulateTree()
+	{
+		EntityManager entityManager = Tag.entityManager();
+		entityManager.createQuery("select t from Tag t left join fetch t.tags").getResultList();
+		Tag root = entityManager.find( Tag.class, 1L);
+		logger.info("Tag root=" + root.getName());
+//		printOutlines(root.getOutlines());;
+//		List<Tag> tags = root.getTags();
+//		for( Tag t : tags)
 //		{
-//			logger.info("testParse() - Group group=" + group);
-//			printGroup(group.getGroups());
-//			
+//			printTag(t);
 //		}
-//	}
+		
+	}
+	
+	void printTag(Tag tag)
+	{
+		String tagName = tag.getName();
+		logger.info("String tagName=" + tagName);
+		printOutlines(tag.getOutlines());
+		for( Tag t : tag.getTags())
+		{
+			printTag(tag);
+		}
+	}
+	
+	void printOutlines(Set<Outline> outlines)
+	{
+		
+		for(Outline i : outlines)
+		{
+			String title = i.getTitle();
+			logger.info("String title=" + title);
+			String url = i.getUrl();
+			logger.info("String url=" + url);
+		}
+	}
+	
 }

@@ -2,6 +2,8 @@ package cai.peter.rss.opml.model;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
+
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @RooJavaBean
@@ -26,5 +28,6 @@ public class Outline {
     /**
      */
     @ManyToOne
+    @JoinColumn(name="tagId")
     private Tag tag;
 }

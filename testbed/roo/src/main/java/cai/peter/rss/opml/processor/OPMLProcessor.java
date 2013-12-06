@@ -37,10 +37,10 @@ public class OPMLProcessor
 		super();
 	}
 
-	Tag /*root = null,*/ currentTag = null; 
+	Tag currentTag = null; 
 	
 	
-	public /*Group*/void process(InputStream is) throws JDOMException, IOException, FeedParserException
+	public void process(InputStream is) throws JDOMException, IOException, FeedParserException
 	{
 		Document doc = new SAXBuilder().build(is);
         
@@ -100,19 +100,15 @@ public class OPMLProcessor
 			public void onItem(FeedParserState state, String title, String weblog,
 					String description, String feed) throws FeedParserException
 			{
-//				System.out.println("title: "+title);
-//				System.out.println("feed: "+feed);
 				Outline outline = new Outline(title, feed);
-//				logger.info("process() - Outline outline=" + outline);
-//				outline.persist();
-				outline.setTag(currentTag);
+				logger.info("process() - Outline outline=" + outline);
 				currentTag.addOutline(outline);
+				outline.setTag(currentTag);
+				outline.persist();
 			}
 			
 			public void onFolderEnd() throws FeedParserException
 			{
-				logger.info("onFolderEnd()");
-				currentTag.persist();
 				if( !currentTag.isRoot())
 					currentTag = currentTag.getParent();
 			}
