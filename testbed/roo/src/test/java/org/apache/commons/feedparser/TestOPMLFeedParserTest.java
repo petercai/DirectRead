@@ -29,8 +29,8 @@ public class TestOPMLFeedParserTest
 	 */
 	private static final Logger	logger		= Logger.getLogger(TestOPMLFeedParserTest.class);
 //	String opmlFile = "org/apache/commons/feedparser/christian1.opml";
-//	String opmlFile = "org/apache/commons/feedparser/subscriptions.xml";
-	String opmlFile = "org/apache/commons/feedparser/rssowl.opml";
+	String opmlFile = "org/apache/commons/feedparser/subscriptions.xml";
+//	String opmlFile = "org/apache/commons/feedparser/rssowl.opml";
 	@Before
 	public void setUp() throws Exception
 	{}

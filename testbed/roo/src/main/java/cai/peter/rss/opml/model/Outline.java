@@ -2,6 +2,8 @@ package cai.peter.rss.opml.model;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
+
+import javax.persistence.Column;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
@@ -16,6 +18,7 @@ public class Outline {
 
     /**
      */
+    @Column(columnDefinition="LONGTEXT")
     private String url;
 
     public Outline(String title, String url) {
@@ -32,5 +35,10 @@ public class Outline {
 
     /**
      */
-    private String processorImpl;
+    private String implClass;
+
+    /**
+     */
+    @Column(columnDefinition="LONGTEXT")
+    private String htmUrl;
 }

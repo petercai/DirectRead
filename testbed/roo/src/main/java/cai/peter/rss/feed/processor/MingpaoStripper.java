@@ -18,64 +18,37 @@ import org.jsoup.select.Elements;
  * @author pcai01
  *
  */
-public class ParseMing {
+public class MingpaoStripper implements IStripper {
 
 	/**
 	 * @param args
 	 * @throws IOException 
 	 */
-//	public static void main(String[] args) throws IOException {
-//		// TODO Auto-generated method stub
-//		File file = new File("C:\\Users\\PCAI01\\Documents\\scrapbook\\data\\20131029161950\\index.html");
-//		doc = Jsoup.parse(file, "UTF-8");
-//		Elements elements = doc.select("td>font");
-//		for( Element e : elements)
-//		{
-//			System.out.println(new ParseMing().getPath(e));
-//			String html = e.parent().html();
-//			System.out.print("size[");
-//			System.out.print(html.length());
-//			System.out.print("]:");
-//			System.out.println();
-//			System.out.println(html);
-//		}
-//	}
 	
 	
-	String url;
-	private Document doc;
-	
-	public ParseMing(String url) {
+	public MingpaoStripper() {
 		super();
-		this.url = url;
 	}
 
 	
+	/* (non-Javadoc)
+	 * @see cai.peter.rss.feed.processor.IStripper#getPage(java.lang.String)
+	 */
+	@Override
 	public Document getPage(String url) throws IOException
 	{
 		return Jsoup.connect(url).get();
 	}
-	
-	public Document getPage(File file) throws IOException
-	{
-		return Jsoup.parse(file, "UTF-8");
-	}
+
 	
 	Map<String, Element> elMap = new HashMap<String, Element>();
 	Map<String, Integer> pathMap = new HashMap<String, Integer>();
+
 	
-	class PathData
-	{
-		public PathData(String path, Element content, int count) {
-			this.path = path;
-			this.content = content;
-			this.count = count;
-		}
-		String path;
-		Element content;
-		int count;
-	}
-	
+	/* (non-Javadoc)
+	 * @see cai.peter.rss.feed.processor.IStripper#getContent(org.jsoup.nodes.Document)
+	 */
+	@Override
 	public Element getContent(Document doc)
 	{
 		Elements elements = doc.select("td>font");
@@ -89,14 +62,6 @@ public class ParseMing {
 				pathMap.put(path, 1);
 				elMap.put(path, e);
 			}
-				
-//			System.out.println(path);
-//			String html = e.parent().html();
-//			System.out.print("size[");
-//			System.out.print(html.length());
-//			System.out.print("]:");
-//			System.out.println();
-//			System.out.println(html);
 		}
 		
 		int top = 0;

@@ -101,6 +101,7 @@ public class OPMLProcessor
 					String description, String feed) throws FeedParserException
 			{
 				Outline outline = new Outline(title, feed);
+				outline.setHtmUrl(weblog);
 				logger.info("process() - Outline outline=" + outline);
 				currentTag.addOutline(outline);
 				outline.setTag(currentTag);
